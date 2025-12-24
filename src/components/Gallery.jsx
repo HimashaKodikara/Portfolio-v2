@@ -12,10 +12,10 @@ const Gallery = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Photo <span className="text-gradient">Gallery</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-4">
+            Photo Gallery
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-4"></div>
+          <div className="w-20 h-1 bg-black dark:bg-white mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Moments captured from events, achievements, and memorable experiences
           </p>
@@ -56,7 +56,7 @@ const Gallery = () => {
         <div className="text-center">
           <Link
             to="/gallery"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
           >
             View More
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

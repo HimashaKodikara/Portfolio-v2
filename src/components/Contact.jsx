@@ -34,10 +34,10 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Get In <span className="text-gradient">Touch</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-4">
+            Get In Touch
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-4"></div>
+          <div className="w-20 h-1 bg-black dark:bg-white mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Feel free to reach out through any of these platforms. I'm always open to discussing new projects, creative ideas, or opportunities.
           </p>
@@ -53,10 +53,10 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="group flex flex-col items-center justify-center w-32 h-32 bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-700"
             >
-              <div className="text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors mb-2">
+              <div className="text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white transition-colors mb-2">
                 {getIcon(link.icon)}
               </div>
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white transition-colors">
                 {link.name}
               </span>
             </a>
@@ -69,7 +69,7 @@ const Contact = () => {
             Or send me an email at{' '}
             <a
               href="mailto:your.email@example.com"
-              className="text-primary-600 dark:text-primary-400 font-semibold hover:underline"
+              className="text-black dark:text-white font-semibold hover:underline"
             >
               your.email@example.com
             </a>

@@ -34,7 +34,7 @@ const Navbar = ({ isDark, toggleTheme }) => {
           <a 
             href="#home" 
             onClick={(e) => scrollToSection(e, '#home')}
-            className="text-2xl font-bold text-gradient hover:scale-105 transition-transform"
+            className="text-2xl font-bold text-black dark:text-white hover:scale-105 transition-transform"
           >
             Portfolio
           </a>
@@ -46,9 +46,9 @@ const Navbar = ({ isDark, toggleTheme }) => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className={`text-sm font-medium transition-colors hover:text-primary-600 dark:hover:text-primary-400 ${
+                className={`text-sm font-medium transition-colors hover:text-black dark:hover:text-white ${
                   activeSection === link.href.substring(1)
-                    ? 'text-primary-600 dark:text-primary-400'
+                    ? 'text-black dark:text-white'
                     : 'text-gray-700 dark:text-gray-300'
                 }`}
               >
@@ -122,7 +122,7 @@ const Navbar = ({ isDark, toggleTheme }) => {
                 onClick={(e) => scrollToSection(e, link.href)}
                 className={`block px-3 py-2 rounded-lg text-base font-medium transition-colors ${
                   activeSection === link.href.substring(1)
-                    ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400'
+                    ? 'bg-gray-100 dark:bg-gray-700 text-black dark:text-white'
                     : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                 }`}
               >

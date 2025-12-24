@@ -47,7 +47,7 @@ const Footer = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
                 aria-label={link.name}
               >
                 {getIcon(link.icon)}
@@ -58,7 +58,7 @@ const Footer = () => {
           {/* Back to Top */}
           <a
             href="#home"
-            className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center gap-1"
+            className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors flex items-center gap-1"
           >
             Back to top
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
