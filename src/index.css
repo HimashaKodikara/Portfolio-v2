@@ -52,10 +52,5 @@
 }
 
 @layer utilities {
-  .text-gradient {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right, var(--color-primary-500), rgb(147 51 234));
-  }
+  /* Removed text-gradient for simplified monochrome styling */
 }

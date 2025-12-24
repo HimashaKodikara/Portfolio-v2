@@ -1,9 +1,9 @@
 export const personalInfo = {
-  name: "Your Name",
-  title: "Software Engineer",
+  name: "Himasha Kodikara",
+  title: "Software Engineer * Video Editor * Badmiton Player * Toastmaster",
   tagline: "Building elegant solutions to complex problems",
-  email: "your.email@example.com",
-  location: "Your City, Country",
+  email: "himasha.kodikara2001@gmail.com",
+  location: "Colombo, Sri Lanka",
 };
 
 export const about = {

@@ -2,9 +2,18 @@ import { personalInfo } from '../data/portfolio';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-white via-primary-50/30 to-purple-50/30 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
-      {/* Animated Background Elements */}
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* IT Workspace Background Image */}
       <div className="absolute inset-0 overflow-hidden">
+        <img 
+          src="/it-workspace-bg.png" 
+          alt="IT Workspace" 
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Gradient Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-primary-50/85 to-purple-50/90 dark:from-gray-900/95 dark:via-slate-900/90 dark:to-indigo-950/95"></div>
+        
+        {/* Animated gradient orbs for depth */}
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-300/20 dark:bg-primary-600/10 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-300/20 dark:bg-purple-600/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
@@ -17,12 +26,12 @@ const Hero = () => {
           </p>
 
           {/* Name */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 animate-slide-up">
-            <span className="text-gradient">{personalInfo.name}</span>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 animate-slide-up text-black dark:text-white">
+            {personalInfo.name}
           </h1>
 
           {/* Title */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black dark:text-white mb-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
             {personalInfo.title}
           </h2>
 
@@ -35,13 +44,13 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <a
               href="#projects"
-              className="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="px-8 py-4 bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 font-semibold rounded-lg border-2 border-primary-600 dark:border-primary-400 hover:bg-primary-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="px-8 py-4 bg-white dark:bg-gray-800 text-black dark:text-white font-semibold rounded-lg border-2 border-black dark:border-white hover:bg-gray-100 dark:hover:bg-gray-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
               Contact Me
             </a>
