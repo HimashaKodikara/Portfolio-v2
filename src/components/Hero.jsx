@@ -48,7 +48,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-30 items-center">
           {/* Left Side - Profile Card */}
-          <div className="flex justify-center lg:justify-end animate-slide-right">
+          <div className="flex justify-center lg:justify-end animate-slide-right pr-25">
             <div className="relative group">
               {/* Glowing Border Effect */}
               <div className="absolute -inset-1 bg-black dark:bg-white rounded-2xl blur-lg opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
@@ -60,7 +60,7 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-black dark:bg-white rounded-full animate-spin-slow"></div>
                   <div className="absolute inset-2 bg-white dark:bg-gray-900 rounded-full flex items-center justify-center">
                     <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-700 to-black dark:from-gray-300 dark:to-white flex items-center justify-center text-white dark:text-black text-6xl font-bold">
-                      {personalInfo.name.split(' ').map(n => n[0]).join('')}
+                      <img src='../../public/Me3.png' className="w-full h-full rounded-full"/>
                     </div>
                   </div>
                 </div>
@@ -145,21 +145,7 @@ const Hero = () => {
               </a>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-12 max-w-md mx-auto lg:mx-0">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-black dark:text-white">5+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Years Exp</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-black dark:text-white">50+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-black dark:text-white">10+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Awards</div>
-              </div>
-            </div>
+          
           </div>
         </div>
 

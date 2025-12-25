@@ -9,12 +9,9 @@ const Navbar = ({ isDark, toggleTheme }) => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Gallery', href: '#gallery' },
-    { name: 'Awards', href: '#awards' },
-    { name: 'Activities', href: '#activities' },
-    { name: 'Contact', href: '#contact' },
+   
   ];
 
   const scrollToSection = (e, href) => {
@@ -28,15 +25,15 @@ const Navbar = ({ isDark, toggleTheme }) => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-20">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a 
             href="#home" 
             onClick={(e) => scrollToSection(e, '#home')}
-            className="text-2xl font-bold text-black dark:text-white hover:scale-105 transition-transform"
+            className="text-2xl font-bold text-black dark:text-white hover:scale-105  transition-transform"
           >
-            Portfolio
+            Himasha Kodikara
           </a>
 
           {/* Desktop Navigation */}

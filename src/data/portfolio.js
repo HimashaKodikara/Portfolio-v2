@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Himasha Kodikara",
   title: "Software Engineer * Video Editor * Badmiton Player * Toastmaster",
-  tagline: "Building elegant solutions to complex problems",
+  tagline: "Turning ideas into interactive, responsive, and meaningful digital experiences.",
   email: "himasha.kodikara2001@gmail.com",
   location: "Colombo, Sri Lanka",
 };
@@ -9,15 +9,40 @@ export const personalInfo = {
 export const about = {
   description: `I'm a passionate software engineer with a love for creating beautiful and functional web applications. 
   I specialize in modern web technologies and enjoy solving complex problems with elegant solutions.`,
-  image: "/profile.jpg", // Add your profile image to public folder
+  image: "../public/about_img.png",
 };
 
-export const education = {
-  university: "Your University Name",
-  degree: "Bachelor of Science in Computer Science",
-  duration: "2020 - 2024",
-  gpa: "3.8/4.0",
-};
+export const education = [
+  {
+    id: 1,
+    university: "University of Moratuwa",
+    degree: "BSc in Information Technology and Management",
+    duration: "2022 - 2026",
+  
+  },
+   {
+    id: 2,
+    university: "Open University Sri Lanka",
+    degree: "BSc in Software Engineering",
+    duration: "2021 - 2026",
+    
+  },
+    {
+    id: 3,
+    university: "CA Institute of Management",
+    degree: "CA Part Qulified",
+    duration: "2020 - 2021",
+    
+  },
+  {
+    id: 4,
+    university: "AAT Sri Lanka",
+    degree: "AAT Past Finalist(MAAT)",
+    duration: "2019 - 2021",
+    
+  },
+];
+
 
 export const experiences = [
   {
