@@ -2,10 +2,10 @@ import { useState } from "react";
 import { experiences } from "../data/portfolio";
 
 const Experience = () => {
-  // State to track which experience items have expanded responsibilities
+  // State to track which experience items are expanded
   const [expandedItems, setExpandedItems] = useState({});
 
-  // Toggle function for expanding/collapsing responsibilities
+  // Toggle function for expanding/collapsing entire card
   const toggleExpanded = (expId) => {
     setExpandedItems((prev) => ({
       ...prev,
@@ -33,10 +33,6 @@ const Experience = () => {
           <div className="space-y-12">
             {experiences.map((exp, index) => {
               const isExpanded = expandedItems[exp.id];
-              const displayedResponsibilities = isExpanded
-                ? exp.responsibilities
-                : exp.responsibilities.slice(0, 4);
-              const hasMore = exp.responsibilities.length > 4;
 
               return (
                 <div
@@ -54,97 +50,97 @@ const Experience = () => {
                       index % 2 === 0 ? "md:pr-12" : "md:pl-12"
                     }`}
                   >
-                    <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-700">
-                      {/* Duration Badge */}
-                      <span className="inline-block px-4 py-1 bg-gray-100 dark:bg-gray-700 text-black dark:text-white text-sm font-semibold rounded-full mb-4">
-                        {exp.duration}
-                      </span>
+                    <div className="group relative bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-700 overflow-hidden backdrop-blur-sm">
+                      {/* White Accent Line at Top */}
+                      <div className="h-1 bg-gradient-to-r from-white via-gray-200 to-white dark:from-gray-700 dark:via-white dark:to-gray-700"></div>
 
-                      {/* Title and Company */}
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                        {exp.title}
-                      </h3>
-                      <p className="text-black dark:text-white font-semibold mb-4">
-                        {exp.company}
-                      </p>
+                      {/* Card Content */}
+                      <div className="p-6">
+                        {/* Title and Company - Always Visible */}
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="flex-1">
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+                              {exp.title}
+                            </h3>
+                            <p className="text-black dark:text-white font-semibold text-base">
+                              {exp.company}
+                            </p>
+                          </div>
 
-                      {/* Responsibilities */}
-                      <ul className="space-y-2 mb-4">
-                        {displayedResponsibilities.map((resp, idx) => (
-                          <li
-                            key={idx}
-                            className="flex items-start text-gray-600 dark:text-gray-400 text-sm"
+                          {/* Expand/Collapse Arrow Button */}
+                          <button
+                            onClick={() => toggleExpanded(exp.id)}
+                            className="flex-shrink-0 p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-all duration-300 hover:scale-110"
+                            aria-label={
+                              isExpanded ? "Collapse details" : "Expand details"
+                            }
                           >
                             <svg
-                              className="w-5 h-5 text-black dark:text-white mr-2 flex-shrink-0 mt-0.5"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
+                              className={`w-6 h-6 text-black dark:text-white transform transition-transform duration-300 ${
+                                isExpanded ? "rotate-180" : ""
+                              }`}
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
                             >
                               <path
-                                fillRule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clipRule="evenodd"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
                               />
                             </svg>
-                            <span>{resp}</span>
-                          </li>
-                        ))}
-                      </ul>
+                          </button>
+                        </div>
 
-                      {/* See More/See Less Button */}
-                      {hasMore && (
-                        <button
-                          onClick={() => toggleExpanded(exp.id)}
-                          className="text-black dark:text-white font-semibold text-sm hover:underline mb-4 flex items-center gap-1 transition-all duration-200"
+                        {/* Expandable Content */}
+                        <div
+                          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                            isExpanded
+                              ? "max-h-[2000px] opacity-100 mt-4"
+                              : "max-h-0 opacity-0"
+                          }`}
                         >
-                          {isExpanded ? (
-                            <>
-                              See Less
-                              <svg
-                                className="w-4 h-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M5 15l7-7 7 7"
-                                />
-                              </svg>
-                            </>
-                          ) : (
-                            <>
-                              See More ({exp.responsibilities.length - 4} more)
-                              <svg
-                                className="w-4 h-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M19 9l-7 7-7-7"
-                                />
-                              </svg>
-                            </>
-                          )}
-                        </button>
-                      )}
-
-                      {/* Technologies */}
-                      <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech, idx) => (
-                          <span
-                            key={idx}
-                            className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-full"
-                          >
-                            {tech}
+                          {/* Duration Badge */}
+                          <span className="inline-block px-4 py-1 bg-gray-100 dark:bg-gray-700 text-black dark:text-white text-sm font-semibold rounded-full mb-4">
+                            {exp.duration}
                           </span>
-                        ))}
+
+                          {/* Responsibilities */}
+                          <ul className="space-y-2 mb-4">
+                            {exp.responsibilities.map((resp, idx) => (
+                              <li
+                                key={idx}
+                                className="flex items-start text-gray-600 dark:text-gray-400 text-sm"
+                              >
+                                <svg
+                                  className="w-5 h-5 text-black dark:text-white mr-2 flex-shrink-0 mt-0.5"
+                                  fill="currentColor"
+                                  viewBox="0 0 20 20"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                                <span>{resp}</span>
+                              </li>
+                            ))}
+                          </ul>
+
+                          {/* Technologies */}
+                          <div className="flex flex-wrap gap-2">
+                            {exp.technologies.map((tech, idx) => (
+                              <span
+                                key={idx}
+                                className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-full"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
