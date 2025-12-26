@@ -139,81 +139,96 @@ export const projects = [
 export const awards = [
   {
     id: 1,
-    title: "First Place - National Hackathon 2023",
-    year: "2023",
-    description: "Won first place for developing an AI-powered healthcare solution",
+    title: "AWS Cloud Practitioner Essentials",
+    year: "2025",
+    description: "",
   },
   {
     id: 2,
-    title: "Best Innovation Award",
-    year: "2022",
-    description: "Recognized for innovative approach to sustainable technology",
+    title: "Artificial Intelligence Fundamentals",
+    year: "2025",
+    description: "IBM",
   },
   {
     id: 3,
     title: "Dean's List",
-    year: "2021-2024",
-    description: "Maintained GPA above 3.5 for all semesters",
+    year: "2022",
+    description: "Maintained GPA above 3.5 in Level 1 Semester 1",
   },
   {
     id: 4,
-    title: "Google Code Jam Finalist",
-    year: "2022",
-    description: "Reached finals in competitive programming competition",
+    title: "Untill Level 4 completion",
+    year: "2021-2025",
+    description: "Toastmasters Dynamic leadership path",
   },
 ];
 
 export const activities = [
   {
     id: 1,
-    name: "Tech Club President",
-    role: "President",
-    duration: "2022 - 2024",
-    description: "Led a team of 50+ members, organized workshops and hackathons",
+    name: "Batch Representative",
+    role: "Batch Representative",
+    duration: "2022 - 2023",
+    description: "Represented the batch in level 1 activities. Conrdinate between lectures and students",
   },
   {
     id: 2,
-    name: "Open Source Contributor",
-    role: "Contributor",
-    duration: "2021 - Present",
-    description: "Active contributor to popular open-source projects on GitHub",
+    name: "W7 Toastmasters",
+    role: "Secetary",
+    duration: "2023 - 2024",
+    description: "club's chief administrator, responsible for managing all official records, correspondence, and meeting minutes, ensuring continuity and organization",
   },
   {
     id: 3,
-    name: "Volunteer Coding Instructor",
-    role: "Instructor",
-    duration: "2020 - 2023",
-    description: "Taught programming basics to underprivileged students",
+    name: "W7 Toastmasters",
+    role: "Vice President public relations",
+    duration: "2024 - 2025",
+    description: "promoting the club, managing its public image, and attracting new members by developing and executing publicity programs, handling communications (newsletters, social media, website), protecting the Toastmasters brand, and informing members and the public about club activities and achievements",
   },
   {
     id: 4,
-    name: "University Basketball Team",
-    role: "Team Member",
-    duration: "2020 - 2022",
-    description: "Competed in inter-university tournaments",
+    name: "W7 Toastmasters",
+    role: "Vice President of Membership",
+    duration: "2024 - present",
+    description: "focusing on recruiting new members, retaining existing ones, and ensuring a positive guest experience by welcoming visitors, answering questions, managing applications, and implementing membership-building programs",
+  },
+  {
+    id: 5,
+    name: "Division B Toastmasters",
+    role: "Assistant Vice President public Relations",
+    duration: "2025 - present",
+    description: "Designed videos and flyers for the Division B Toastmasters.",
+  },
+  {
+    id: 6,
+    name: "University of Moratuwa Badminton",
+    role: "Video and FLyer Desginer",
+    duration: "2022 - 2025",
+    description: "Designed videos and flyers for the University of Moratuwa Badminton club",
   },
 ];
 
 export const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com/yourusername",
+    url: "https://github.com/HimashaKodikara",
     icon: "FaGithub",
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/in/himasha-kodikara/",
     icon: "FaLinkedin",
   },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/yourusername",
-    icon: "FaTwitter",
-  },
+ 
   {
     name: "Email",
-    url: "mailto:your.email@example.com",
+    url: "mailto:himasha.kodikara2001@gmail.com",
     icon: "FaEnvelope",
+  },
+  {
+    name: "Phone",
+    url: "tel:+94770222222",
+    icon: "FaPhone",
   },
 ];
 
