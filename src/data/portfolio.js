@@ -202,7 +202,7 @@ export const activities = [
   {
     id: 6,
     name: "University of Moratuwa Badminton",
-    role: "Video and FLyer Desginer",
+    role: "Video and Flyer Desginer",
     duration: "2022 - 2025",
     description: "Designed videos and flyers for the University of Moratuwa Badminton club",
   },
