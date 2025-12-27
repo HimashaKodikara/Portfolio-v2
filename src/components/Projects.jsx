@@ -27,7 +27,7 @@ const Projects = () => {
               <div className="relative h-48 bg-gray-300 dark:bg-gray-700 overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img
-                    src={project.image}
+                    src={`${import.meta.env.BASE_URL}${project.image}`}
                     alt={project.name}
                     className="w-full h-full object-cover"
                   />

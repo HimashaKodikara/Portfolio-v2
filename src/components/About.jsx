@@ -20,7 +20,7 @@ const About = () => {
               <div className="absolute -inset-1 bg-black dark:bg-white rounded-full blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
                 <img
-                  src={about.image}
+                  src={`${import.meta.env.BASE_URL}${about.image}`}
                   alt="Profile"
                   className="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
                 />

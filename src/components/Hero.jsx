@@ -82,7 +82,7 @@ const Hero = () => {
                   <div className="absolute inset-2 bg-white dark:bg-gray-900 rounded-full flex items-center justify-center">
                     <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-700 to-black dark:from-gray-300 dark:to-white flex items-center justify-center text-white dark:text-black text-6xl font-bold">
                       <img
-                        src="/Me3.png"
+                        src={`${import.meta.env.BASE_URL}Me3.png`}
                         className="w-full h-full rounded-full"
                       />
                     </div>

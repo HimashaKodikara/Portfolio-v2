@@ -1,19 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const ImageModal = ({ image, onClose }) => {
   useEffect(() => {
     // Prevent body scroll when modal is open
-    document.body.style.overflow = 'hidden';
-    
+    document.body.style.overflow = "hidden";
+
     // Close on Escape key
     const handleEscape = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === "Escape") onClose();
     };
-    window.addEventListener('keydown', handleEscape);
+    window.addEventListener("keydown", handleEscape);
 
     return () => {
-      document.body.style.overflow = 'unset';
-      window.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleEscape);
     };
   }, [onClose]);
 
@@ -29,14 +29,24 @@ const ImageModal = ({ image, onClose }) => {
           className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
           aria-label="Close modal"
         >
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <svg
+            className="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
 
         {/* Image */}
         <img
-          src={image.image}
+          src={`${import.meta.env.BASE_URL}${image.image}`}
           alt={image.title}
           className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl animate-slide-up"
           onClick={(e) => e.stopPropagation()}
