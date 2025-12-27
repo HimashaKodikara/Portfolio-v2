@@ -9,7 +9,7 @@ export const personalInfo = {
 export const about = {
   description: `I'm a passionate software engineer with a love for creating beautiful and functional web applications. 
   I specialize in modern web technologies and enjoy solving complex problems with elegant solutions.`,
-  image: "../public/about_img.png",
+  image: "/about_img.png",
 };
 
 export const education = [
@@ -90,7 +90,7 @@ export const projects = [
     technologies: ["React", "React Native", "Node.js", "MongoDB","Express","Tailwind CSS","Firebase","Stripe"],
     github: "https://github.com/HimashaKodikara/ShuttlemateClient.git",
     demo: "https://www.linkedin.com/posts/himasha-kodikara_reactnative-firebase-mongodb-activity-7382065123193970688-nQib?utm_source=share&utm_medium=member_desktop&rcm=ACoAADM-gQIBJ7MkDdsI7YcswgnVVcsY9KTymi4",
-    image: "../public/project_img_1.png",
+    image: "/project_img_1.png",
   },
   {
     id: 2,
@@ -99,7 +99,7 @@ export const projects = [
     technologies: ["React.js", "Tailwind CSS", "ASP.NET", "Microsoft Azure"],
     github: "https://github.com/HimashaKodikara/license_management_system-FrontEnd.git",
     demo: "https://www.linkedin.com/posts/himasha-kodikara_mr-licensemanagement-softwaredevelopment-activity-7217923175622266880-x8-h?utm_source=share&utm_medium=member_desktop&rcm=ACoAADM-gQIBJ7MkDdsI7YcswgnVVcsY9KTymi4",
-    image: "../public/project_img_2.png",
+    image: "/project_img_2.png",
   },
   {
     id: 3,
@@ -108,7 +108,7 @@ export const projects = [
     technologies: ["Angular", "Genkit", "Vertex AI", "Ollama"],
     github: "https://github.com/HimashaKodikara/smart-grocery-assistant.git",
     demo: "https://www.linkedin.com/posts/himasha-kodikara_smart-grocery-assistant-built-an-intelligent-activity-7395039993066348545-MVlI?utm_source=share&utm_medium=member_desktop&rcm=ACoAADM-gQIBJ7MkDdsI7YcswgnVVcsY9KTymi4",
-    image: "../public/project_img_3.png",
+    image: "/project_img_3.png",
   },
   {
     id: 4,
@@ -116,7 +116,7 @@ export const projects = [
     description: "Excited to share our Enterprise Application Development project - ArtZtall: An Online Artwork Shopping Platform! We built a comprehensive e-commerce solution using microservices architecture to connect artists with art enthusiasts.",
     technologies: ["React", "Spring Boot", "Tailwind CSS","MongoDB","Docker"],
     github: "https://github.com/ArtEcommercePlatform",
-    image: "../public/project_img_4.jpg",
+    image: "/project_img_4.jpg",
   },
    {
     id: 5,
@@ -125,14 +125,14 @@ export const projects = [
     technologies: ["React", "OpenAI", "Tailwind CSS"],
     github: "https://github.com/HimashaKodikara/AI-Image-Generator-",
     demo: "https://generateimageprompt.netlify.app/",
-    image: "../public/project_img_5.jpg",
+    image: "/project_img_5.jpg",
   },  {
     id: 6,
     name: "Cab Service",
     description: "This is a single-page application designed to calculate the total amount a user needs to pay. The user can select the vehicle type, input the number of passengers, and specify the distance in kilometres. The application then calculates the total cost based on these inputs.",
     technologies: ["Python"],
     github: "https://github.com/HimashaKodikara/CabServise",
-    image: "../public/project_img_6.jpg",
+    image: "/project_img_6.jpg",
   },
 ];
 
