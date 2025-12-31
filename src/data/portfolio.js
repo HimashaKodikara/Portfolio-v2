@@ -450,5 +450,19 @@ export const galleryImages = [
     image: "gallery_34.jpg",
     thumbnail: "gallery_34.jpg",
   },
+    {
+    id: 32,
+    title: "Dinner Out",
+    category: "Toastmasters",
+    image: "gallery_35.jpeg",
+    thumbnail: "gallery_35.jpeg",
+  },
+    {
+    id: 33,
+    title: "Book Donation",
+    category: "Toastmasters",
+    image: "gallery_36.jpeg",
+    thumbnail: "gallery_36.jpeg",
+  },
 ];
 
