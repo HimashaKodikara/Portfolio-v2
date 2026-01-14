@@ -153,7 +153,7 @@ export const awards = [
     id: 3,
     title: "Dean's List",
     year: "2022",
-    description: "Maintained GPA above 3.5 in Level 1 Semester 1",
+    description: "Maintained GPA above 3.7 in Level 1 Semester 1",
   },
   {
     id: 4,
